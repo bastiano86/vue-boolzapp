@@ -17,7 +17,23 @@
 .app_container {
     
     align-items: center;
-    background-color: azure;
     width: 75%;
-    height: 95%;
+    height: 850px;
+}
+
+
+.bur {
+    background-color: burlywood;
+    height: 850px;
+}
+
+.crm {
+    background-color: crimson;
+    height: 850px;
+}
+
+.nome_utente {
+    background-color: darkgrey;
+    height: 50px;
+    padding: 0;
 }
