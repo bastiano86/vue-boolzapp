@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
 }
+.green {
+    background-color: chartreuse;
+}
+.blue {
+    background-color: rgb(100, 100, 167);
+}
 .crm {
     background-color: hotpink;
 }
@@ -63,4 +69,7 @@ i   {
 .input-wrapper {
     padding:5px;
     background-color: rgb(97, 173, 218);
+}
+.chat-wrapper {
+    border-radius: 10px;
 }
