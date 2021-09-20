@@ -3,7 +3,23 @@
     margin: 0;
     padding: 0;
 }
-
+.crm {
+    background-color: hotpink;
+}
+.vl {
+    border-left: 2px solid rgb(193, 193, 193);
+    height: 70px;
+    position: absolute;
+    left: 97%;
+    margin-left: 10px;
+    top: 0px; 
+    }
+i   {
+    height:40px;
+    padding-left: 13px;
+    font-size: 1.7em;
+    color:rgb(172, 172, 172);
+    }
 .big_background {
     display: flex;
     align-items: center;
@@ -13,27 +29,38 @@
     background: rgb(72,129,75);
     background: linear-gradient(180deg, rgba(72,129,75,1) 10%, rgb(189, 189, 189) 10%); 
 }
-
-.app_container {
-    
-    align-items: center;
-    width: 75%;
-    height: 850px;
+.greybar {
+    position: relative;
+    background-color: rgb(219, 219, 219);
+    height:70px;
+    width:90vw;
+}
+.user-space, .friend-space {
+    padding:10px;
+}
+.user-space img, .friend-space img{
+    height:50px;
 }
 
-
-.bur {
-    background-color: burlywood;
-    height: 850px;
+.nome-utente{
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 6px;
+}
+.text-space{
+    height:600px;
+    background-color: rgb(236, 236, 236);
 }
 
-.crm {
-    background-color: crimson;
-    height: 850px;
+.list-space{
+    height: 600px;
+    background-color: rgb(209, 209, 209);
 }
 
-.nome_utente {
-    background-color: darkgrey;
-    height: 50px;
-    padding: 0;
+.avatar {
+    width: 50px;
+}
+.input-wrapper {
+    padding:5px;
+    background-color: rgb(97, 173, 218);
 }

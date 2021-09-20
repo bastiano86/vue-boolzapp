@@ -19,11 +19,44 @@
 </head>
 <body>
     <div class="big_background">
-        <div id="app" class="app_container">
-            <div class="sx">
-
+        <div id="app">
+            <header class="row greybar">
+            <div class="col-3 user-space d-flex flex-rows align-items-center">
+                    <img class="rounded-circle ml-3s" src="img/avatar_io.jpg" alt=""><span class="nome-utente pb-3">Nome Utente</span>
+                    <div class="icons-wrapper d-flex justify-content-end">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <span class="vl"></span>
             </div>
-            <div class="dx"></div>
+            <div class="col-9 friend-space d-flex flex-rows align-items-center">
+                <div>
+                    <img class="rounded-circle ml-1" src="img/avatar_8.jpg" alt=""><span class="nome-utente">Michele</span>
+                </div>
+                <div class="icons-wrapper d-flex justify-content-start">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            </header>
+            <main>
+                <div class="row">
+                    <!--parte sinistra-->
+                    <div class="col-3 list-space">
+                        <div class="input-wrapper">
+                            <input placeholder="scrivi qui" type="text" name="" id="">
+                        </div>
+                        <div v-for="element in contacts" class="pb-4">
+                            <img class="rounded-circle avatar ml-1" :src="'img/avatar' + element.avatar + '.jpg'" alt="">
+                            <span class="">{{element.name}}</span>
+                        </div>
+                    </div>
+                    <!--parte destra-->
+                    <div class="col-9 text-space d-flex align-items-center"></div>
+                </div>
+            </main>
         </div>
     </div>
     <script src="script/script.js"></script>
