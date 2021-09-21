@@ -87,10 +87,14 @@ var app = new Vue (
                             status: 'received'
                         }
                     ],
-                },
-
-            ]},
+                }, 
+            ],
+            current:0,
+            },
+            
             methods:{
-                
+                clickSuContatto(index){
+                    this.current=index;
+                },
             },
     });
