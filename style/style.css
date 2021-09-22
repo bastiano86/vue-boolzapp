@@ -73,11 +73,13 @@ i   {
 .chat-wrapper {
     border-radius: 10px;
 }
-.sent-message{
+.sent{
+    float: right;
     padding: 10px;
     background-color: white;
 }
-.received-message{
+.received{
+    float: left;
     padding: 10px;
     background-color:green;
 }

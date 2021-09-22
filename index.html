@@ -29,7 +29,9 @@
             <div class="col-9 friend-space d-flex flex-rows align-items-center">
                 <!--contatto chiamato-->
                 <div>
-                    <img class="rounded-circle ml-1" src="img/avatar_8.jpg" alt=""><span class="nome-utente">Michele</span>
+                    <img v-for="(contact,index)in contacts" class="rounded-circle ml-1" 
+                    :src="'img/avatar' + contacts[current].avatar + '.jpg'" alt="">
+                    <span class="nome-utente">{{contacts[current].name}}</span>
                 </div>
                 
             </div>
@@ -41,27 +43,21 @@
                         <div class="input-wrapper">
                             <input placeholder="scrivi qui" type="text" name="" id="">
                         </div>
-                        <div v-for="(contact,index) in contacts" :class="(index === current)? 'current' :'contact' )" 
+                        <div v-for="(contact,index) in contacts" :class="(index === current)? 'current' : contact" 
                          @click="clickSuContatto(index)">
                             <img class="rounded-circle avatar ml-1"
-                            :src="'img/avatar' + contacts[current].avatar + '.jpg'" alt="contacts[current].name">
+                        :src="'img/avatar' + contact.avatar + '.jpg'" alt="contacts.name">
                             <span class="">{{contact.name}}</span>
                     </div>
                     </div>
                     <!--parte destra-->
-                    <div class="col-9 text-space">
-                        <div class="container">
-                            <div class="row">
+                    <div class="col-9 text-space"> 
                                 <div  class="col-12">
-                                            <div class="col-6 text-start">
-                                                <div class=" received-message rounded">
-                                                    eeeeeee                                  
-                                                </div>
-                                            </div>
-                                            <div class="col-6 text-end float-right">
-                                                <div  class="sent-message rounded">
-                                                    <div >eeeeeeeee</div>
-                                                </div>
+                                            <div v-for="(elemento,index) in contacts[current].messages" :class="elemento.status" class="col-4 m-4">
+                                                <span>
+                                                    {{elemento.text}}
+                                                </span>
+
                                             </div>
                                     </div>
                             </div>
