@@ -43,8 +43,7 @@
                         <div class="input-wrapper">
                             <input placeholder="scrivi qui" type="text" name="" id="">
                         </div>
-                        <div v-for="(contact,index) in contacts" :class="(index === current)? 'current' : contact" 
-                         @click="clickSuContatto(index)">
+                        <div v-for="(contact,index) in contacts" :class="(index === current)? 'current' : contact" @click="clickSuContatto(index)">
                             <img class="rounded-circle avatar ml-1"
                         :src="'img/avatar' + contact.avatar + '.jpg'" alt="contacts.name">
                             <span class="">{{contact.name}}</span>
@@ -52,14 +51,16 @@
                     </div>
                     <!--parte destra-->
                     <div class="col-9 text-space"> 
-                                <div  class="col-12">
-                                            <div v-for="(elemento,index) in contacts[current].messages" :class="elemento.status" class="col-4 m-4">
-                                                <span>
-                                                    {{elemento.text}}
-                                                </span>
-
+                        
+                                    <div v-for="(elemento,index) in contacts[current].messages" :class="elemento.status" class="col-6 m-4 rounded">
+                                        
+                                            <span>
+                                                {{elemento.text}}
+                                            </span>
                                             </div>
+                                        
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
