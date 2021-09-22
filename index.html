@@ -42,12 +42,11 @@
                     <div class="col-3 list-space">
                         <div class="input-wrapper">
                             <input placeholder="scrivi qui" type="text" name="" id="">
+                        </div >
+                        <div class="col-12" v-for="(contact,index) in contacts" :class="(index === current)? 'current' : contact" @click="clickSuContatto(index)">
+                            <img class="rounded-circle avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="contacts.name">
+                            <span>{{contact.name}}</span>
                         </div>
-                        <div v-for="(contact,index) in contacts" :class="(index === current)? 'current' : contact" @click="clickSuContatto(index)">
-                            <img class="rounded-circle avatar ml-1"
-                        :src="'img/avatar' + contact.avatar + '.jpg'" alt="contacts.name">
-                            <span class="">{{contact.name}}</span>
-                    </div>
                     </div>
                     <!--parte destra-->
                     <div class="col-9 text-space"> 
