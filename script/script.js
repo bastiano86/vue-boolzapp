@@ -90,15 +90,16 @@ var app = new Vue (
                 }, 
             ],
             current:0,
-            ricercato:'',
+            persona:0,
             },
             
             methods:{
                 clickSuContatto(index){
                     this.current=index;
                 },
-                nomeRichiesto(nomeScritto){ 
-                    ricercato=nomeScritto; 
-                },
+                stampPersona(persona){
+                    console.log(persona)
+                },            
+                
             },
     });

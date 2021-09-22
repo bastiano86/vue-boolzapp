@@ -41,13 +41,20 @@
                 <div class="row"> 
                     <div class="col-3 list-space">
                         <div class="input-wrapper">
-                            <input placeholder="scrivi qui" type="text" name="" id="">
-                        </div >
-                        <div class="col-12" v-for="(contact,index) in contacts" :class="(index === current)? 'current' : contact" @click="clickSuContatto(index)">
-                            <img class="rounded-circle avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="contacts.name">
-                            <span>{{contact.name}}</span>
+                            <input placeholder="scrivi qui" v-model="persona" type="text" name="" id="">
+                        </div>
+                            <div v-if="(persona == contacts.name[current]) in contacts">
+                                <div class="col-12">{{contact.name[current]}}</div>  
+                            </div>
+                                <div class="col-12" v-for="(contact,index) in contacts" :class="(index === current)? 'current' : contact" @click="clickSuContatto(index)">
+                                    <img class="rounded-circle avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="contacts.name">
+                                    <span>{{contact.name}}</span>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
+                </div>
                     <!--parte destra-->
                     <div class="col-9 text-space"> 
                         
